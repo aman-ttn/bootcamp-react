@@ -5,11 +5,14 @@ return(
 <div>
 
     <table>
-        <tr>
-            <td>{props.name}</td>
-            <td>{props.quantity}</td>
-            <td><button onClick={props.click}>Delete</button></td>
-        </tr>
+        <tbody>
+            <tr>
+                <td>{props.name}</td>
+                <td>{props.quantity}</td>
+                <td><button onClick={props.click}>Delete</button></td>
+            </tr>
+        </tbody>
+        
     </table>
 
 </div>

@@ -20,6 +20,7 @@ class App extends Component {
     this.setState({fruit:fruitName})
   }
   inputFruitHandler=(event)=>{
+    event.preventDefault();
       const fruit=this.state.fruit;
       if(fruit==''){
         this.state.showFruit=false;
@@ -56,6 +57,7 @@ class App extends Component {
         </div> 
       );
   } 
+  console.log(fruits);
     return (
       
       <div className="App">
@@ -64,8 +66,12 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <div>
-          <br/><input type="text" onChange={this.changeHandler} /><br/><br/>
-          <button className="button" onClick={this.inputFruitHandler} type="submit" >Submit</button><br/>
+          <br/>
+          <form onSubmit={this.inputFruitHandler} >
+            <input type="text" onChange={this.changeHandler}  placeholder="Fruit-Name" /><br/><br/>
+            <input type="submit"/>
+          </form>
+        
         </div>
         <br/>
         {fruits}
