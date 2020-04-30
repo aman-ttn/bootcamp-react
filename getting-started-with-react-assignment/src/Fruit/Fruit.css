@@ -1,0 +1,15 @@
+table{
+    margin: auto;
+    align-items: center;
+}
+table,td{
+    width:40%;
+    border:1px solid black;
+    border-bottom-left-radius:5px ;
+    border-bottom-right-radius:5px ;
+}
+td{
+    padding:5px;
+    text-align:center ;
+    background-color: burlywood;
+}
